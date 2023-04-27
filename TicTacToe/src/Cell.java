@@ -12,6 +12,7 @@ public class Cell {
 	/** Constructor to initialise this cell with the specified row and col */
 	public Cell(int row, int col) {
 		
+		
 		// TODO: Initialise the variables row, col 
 
 		
