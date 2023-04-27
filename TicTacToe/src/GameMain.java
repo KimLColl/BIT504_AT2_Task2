@@ -40,7 +40,8 @@ public class GameMain extends JPanel implements MouseListener{
 		
 		// This JPanel fires a MouseEvent on MouseClicked so event listener created.          
 		addMouseListener(this);
-       
+        setFocusable(true);
+	    
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
 		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 14));       
@@ -73,8 +74,7 @@ public class GameMain extends JPanel implements MouseListener{
 				JFrame frame = new JFrame(TITLE);
 				
 				//New GameMain panel added to the frame
-				new GameMain();						
-				
+				frame.add(new GameMain());
 				
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // setting default close operation to exit_on_close
 				frame.pack();             
