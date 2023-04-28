@@ -36,6 +36,7 @@ public class Board {
 				
 		}
 		//no draw, keep playing
+
 		return false;  		
 
 		
@@ -56,7 +57,7 @@ public class Board {
 			return true;		
 		
 		// TODO: Check the diagonal in the other direction
-		if( cells[2][2].content == thePlayer && cells[1][1].content == thePlayer && cells[0][0].content == thePlayer)
+		if( cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells[2][0].content == thePlayer)
 			return true;	
 
 		

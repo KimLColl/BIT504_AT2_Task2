@@ -157,6 +157,7 @@ public class GameMain extends JPanel implements MouseListener{
 
 			}
 			//otherwise no change to current state of playing
+			
 		}
 		
 				
@@ -192,7 +193,7 @@ public class GameMain extends JPanel implements MouseListener{
 		}   
 		
 		//redraw the graphics on the UI      		
-		repaint();	  
+		repaint();
 		
 	}
 		
