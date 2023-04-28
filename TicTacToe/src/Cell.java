@@ -17,7 +17,7 @@ public class Cell {
 		this.col = col;
 		
 		//Calling the method that sets the cell content to EMPTY
-		content = Player.Empty;		
+		clear();	
 		
 }
 	

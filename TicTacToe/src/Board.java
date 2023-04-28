@@ -13,7 +13,7 @@ public class Board {
 	public Board() {
 		
 	 //Initialising the cells array using ROWS and COLS constants
-	cells = new Cell[3][3];	
+	cells = new Cell[3][3];		
 		
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
@@ -29,15 +29,15 @@ public class Board {
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
 				cells[row][col] = new Cell(row, col);
-				if(cells[row][col].content != Player.Empty ) {
-					 return true;
+				if(cells[row][col].content == Player.Empty ) {
+					 return false; //no draw, keep playing					
+					
 				 }
 			}	
 				
-		}
-		//no draw, keep playing
-
-		return false;  		
+		}		
+		
+		return true;  		
 
 		
 	}
