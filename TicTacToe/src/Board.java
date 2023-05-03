@@ -13,14 +13,14 @@ public class Board {
 	public Board() {
 		
 	 //Initialising the cells array using ROWS and COLS constants
-	cells = new Cell[3][3];		
-		
+	cells = new Cell[3][3];	//creates a 3x3 board
+	
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
 				cells[row][col] = new Cell(row, col);
 			}
 		}
-	}
+	} 
 	
 
 	 /** Return true if it is a draw (i.e., no more EMPTY cells) */ 
@@ -28,11 +28,9 @@ public class Board {
 		// Checking whether the game has ended in a draw. 
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
-				cells[row][col] = new Cell(row, col);
 				if(cells[row][col].content == Player.Empty ) {
-					 return false; //no draw, keep playing					
-					
-				 }
+					 return false; //no draw, keep playing			
+				}
 			}	
 				
 		}		
@@ -53,11 +51,11 @@ public class Board {
 		
 		
 		 // 3-in-the-diagonal
-		if( cells[0][0].content == thePlayer && cells[1][1].content == thePlayer && cells[2][2].content == thePlayer)
+		if(cells[0][0].content == thePlayer && cells[1][1].content == thePlayer && cells[2][2].content == thePlayer)
 			return true;		
 		
 		// TODO: Check the diagonal in the other direction
-		if( cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells[2][0].content == thePlayer)
+		if(cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells[2][0].content == thePlayer)
 			return true;	
 
 		
